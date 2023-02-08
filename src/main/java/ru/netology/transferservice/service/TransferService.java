@@ -33,7 +33,7 @@ public class TransferService {
         validateCardDate(cardFromValidTill, now.getMonthValue(), now.getYear());
     }
 
-    private void validateCardDate(String cardFromValidTill, int currentMonth, int currentYear) {
+    void validateCardDate(String cardFromValidTill, int currentMonth, int currentYear) {
         String[] cardYearAndMonth = cardFromValidTill.split("/");
         int cardMonth = Integer.parseInt(cardYearAndMonth[0]);
         int cardYear = LocalDate.now().getYear() + Integer.parseInt(cardYearAndMonth[1]);
